@@ -30,8 +30,8 @@ def tokenize_html(html_file_path):
     return ' '.join(text_tokens)
 
 # Directory paths for JSON and HTML files
-json_files_dir = "dataset/train/json"
-html_files_dir = "dataset/train/html"
+json_files_dir = "dataset/login/train/json"
+html_files_dir = "dataset/login/train/html"
 
 # we are storing texts and labels here
 texts = []
@@ -83,4 +83,4 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 
 model.fit(X_train, y_train, epochs=25, batch_size=64, validation_data=(X_test, y_test))
 
-model.save('model.h5')
+model.save('models/login_model.h5')
