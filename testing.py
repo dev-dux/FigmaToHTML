@@ -65,17 +65,17 @@ def generate_html_for_json(input_json_file_path, tokenizer, max_len, loaded_mode
         output_html_file.write(predicted_html_content)
 
 # Directory paths for HTML files
-html_files_dir = 'dataset/s21_pr_cart/train/html'
+html_files_dir = 'dataset/s27_favorite/train/html'
 
 # Load the model back for predictions
-loaded_model = tf.keras.models.load_model('models/s21_pr_cart_model.h5')
+loaded_model = tf.keras.models.load_model('models/s27_favorite_model.h5')
 
 # Tokenizer for text data
 tokenizer = Tokenizer()
 
 # Example usage for generating HTML file for a given JSON input
-input_json_file_path = 'dataset/s21_pr_cart/test/s21_pr_cart.json'
+input_json_file_path = 'dataset/s27_favorite/test/s27_favorite.json'
 # input_json_file_path = 'new.json'
-output_html_path = 'output/s21_pr_cart/s21_pr_cart_output.html'
+output_html_path = 'output/s27_favorite/s27_favorite_output.html'
 generate_html_for_json(input_json_file_path, tokenizer, max_len, loaded_model, html_files_dir, output_html_path)
 print(f"The HTML file has been generated: {output_html_path}")
