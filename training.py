@@ -30,6 +30,7 @@ def tokenize_html(html_file_path):
     return ' '.join(text_tokens)
 
 # Directory paths for JSON and HTML files
+
 json_files_dir = "dataset/s27_favorite/train/json"
 html_files_dir = "dataset/s27_favorite/train/html"
 
