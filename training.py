@@ -30,8 +30,9 @@ def tokenize_html(html_file_path):
     return ' '.join(text_tokens)
 
 # Directory paths for JSON and HTML files
-json_files_dir = "dataset/s33_view_invoice/train/json"
-html_files_dir = "dataset/s33_view_invoice/train\html"
+
+json_files_dir = "dataset/s27_favorite/train/json"
+html_files_dir = "dataset/s27_favorite/train/html"
 
 # we are storing texts and labels here
 texts = []
@@ -83,5 +84,4 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 
 model.fit(X_train, y_train, epochs=25, batch_size=64, validation_data=(X_test, y_test))
 
-model.save('models/s33_view_invoice.h5')
-
+model.save('models/s27_favorite_model.h5')
