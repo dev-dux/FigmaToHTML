@@ -77,6 +77,7 @@ tokenizer = Tokenizer()
 # Example usage for generating HTML file for a given JSON input
 
 input_json_file_path = 'dataset/s27_favorite/test/s27_favorite.json'
+
 # input_json_file_path = 'new.json'
 output_html_path = 'output/s27_favorite/s27_favorite_output.html'
 generate_html_for_json(input_json_file_path, tokenizer, max_len, loaded_model, html_files_dir, output_html_path)
